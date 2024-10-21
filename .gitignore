@@ -1,0 +1,9 @@
+# Ignore Pycharm config file
+/.idea/
+
+# Ignore .env on local but still accept example
+/**/.env
+!/**/.env.example
+
+# Ignore pycache
+/**/__pycache__/

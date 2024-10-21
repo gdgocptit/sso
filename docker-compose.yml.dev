@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: <username>
+      POSTGRES_PASSWORD: <password>
+      POSTGRES_DB: gdgoc_sso_database
+    volumes:
+      - db_data:/var/lib/postgresql/db_data
+    ports:
+      - "5432:5432"
+    networks:
+      - sso-networks
+  pgadmin:
+    depends_on:
+    - db
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: <admin email>
+      PGADMIN_DEFAULT_PASSWORD: <password>
+    ports:
+      - 16543:80
+    networks:
+      - sso-networks
+volumes:
+  db_data:
+
+networks:
+  sso-networks:
+    driver: bridge
