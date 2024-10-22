@@ -1,0 +1,10 @@
+$font-sans: "Inter", sans-serif;
+$primary-color: #ffffff;
+
+body {
+  font-family: $font-sans;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
