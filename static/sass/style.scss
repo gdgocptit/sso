@@ -8,3 +8,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.custom-navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #000;  
+  .navbar-brand {    
+    .logo {
+      height: 40px; /* Take the full height of the navbar */
+      width: auto; /* Maintain the aspect ratio */
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 0.95rem;
+
+  }
+  .navbar-nav .nav-item.active .nav-link {
+    color: #28a745;
+    border-bottom: 2px solid #28a745;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 10px;
+  }
+}
